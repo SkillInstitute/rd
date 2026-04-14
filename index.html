@@ -3,129 +3,226 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ruhaan Dubai • Cricket Prediction</title>
+<title>Ruhaan Dubai • IPL Prediction</title>
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
   background:url('https://i.pinimg.com/736x/8a/f1/ef/8af1efdbe7321314b207c9601d2ce5ab.jpg') no-repeat center/cover;
-  overflow:hidden;
+  min-height:100vh;
+  color:#fff;
 }
 
-/* Dark overlay */
+/* overlay */
 body::before{
   content:'';
-  position:absolute;
+  position:fixed;
   width:100%;
   height:100%;
-  background:rgba(0,0,0,0.6);
-  backdrop-filter: blur(6px);
+  background:rgba(0,0,0,0.65);
+  backdrop-filter:blur(8px);
+  z-index:0;
 }
 
-/* Center Card */
-.card{
+/* TOP BAR */
+.topbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:12px 16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(12px);
+  border-bottom-left-radius:20px;
+  border-bottom-right-radius:20px;
+  z-index:10;
+  font-weight:500;
+  letter-spacing:0.5px;
+}
+
+.topbar img{
+  width:42px;
+}
+
+/* MAIN */
+.main{
   position:relative;
   z-index:2;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   text-align:center;
-  padding:25px;
-  width:90%;
-  max-width:320px;
-  border-radius:20px;
-  background:rgba(255,255,255,0.08);
-  backdrop-filter: blur(15px);
-  box-shadow:0 10px 40px rgba(0,0,0,0.5);
-  animation:float 4s ease-in-out infinite;
+  padding:0 20px;
 }
 
-/* Floating animation */
-@keyframes float{
-  0%,100%{ transform: translateY(0px);}
-  50%{ transform: translateY(-10px);}
-}
-
-/* DP */
 .dp{
-  width:100px;
-  height:100px;
+  width:110px;
+  height:110px;
   border-radius:50%;
   border:3px solid #00e5ff;
-  object-fit:cover;
   margin-bottom:15px;
 }
 
-/* Name */
 .name{
-  font-size:22px;
-  color:#fff;
+  font-size:24px;
   font-weight:600;
   margin-bottom:5px;
 }
 
-/* Subtitle */
 .sub{
-  color:#ccc;
   font-size:14px;
-  margin-bottom:20px;
+  color:#bbb;
+  margin-bottom:25px;
 }
 
-/* Button */
+/* BUTTON (FULL WIDTH + SVG) */
 .btn{
-  display:block;
-  padding:14px;
-  border-radius:12px;
-  background:linear-gradient(45deg,#00e5ff,#00c853);
-  color:#000;
+  width:100%;
+  max-width:320px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:15px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#229ED9,#0088cc);
+  color:#fff;
+  font-weight:600;
   text-decoration:none;
-  font-weight:bold;
-  transition:0.3s;
+  transition:.3s;
+}
+
+.btn svg{
+  width:20px;
+  height:20px;
 }
 
 .btn:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 15px #00e5ff;
+  transform:translateY(-2px);
+  box-shadow:0 8px 25px rgba(0,136,204,0.5);
 }
 
-/* Bottom text */
-.footer{
-  position:absolute;
+/* NEWS */
+.news{
+  position:relative;
+  z-index:2;
+  padding:25px 20px;
+}
+
+.news h2{
+  font-size:18px;
+  margin-bottom:10px;
+  font-weight:600;
+}
+
+.news p{
+  font-size:14px;
+  color:#ccc;
+  line-height:1.6;
+}
+
+/* BOTTOM MENU */
+.bottom{
+  position:fixed;
   bottom:20px;
   width:100%;
-  text-align:center;
-  color:#aaa;
-  font-size:12px;
+  display:flex;
+  justify-content:center;
+  z-index:10;
 }
-</style>
 
+.menu{
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(10px);
+  padding:10px 18px;
+  border-radius:30px;
+  cursor:pointer;
+  font-size:20px;
+}
+
+/* POPUP */
+.popup{
+  position:fixed;
+  bottom:80px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#111;
+  padding:15px 20px;
+  border-radius:10px;
+  display:none;
+}
+
+.popup a{
+  color:#00e5ff;
+  text-decoration:none;
+  font-weight:500;
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="card">
+<!-- TOP BAR -->
+<div class="topbar">
+  <div>IPL LIVE</div>
+  <img src="https://img.ipl.com/upload/20250109/264d22b04764e4cef78569ed7f3aebe9.png">
+</div>
 
+<!-- MAIN -->
+<div class="main">
   <img class="dp" src="https://d1yei2z3i6k35z.cloudfront.net/13184094/69de131e1acb95.98369606_photo_2026-04-14_15-42-20.jpg">
-
+  
   <div class="name">Ruhaan Dubai</div>
-  <div class="sub">Accurate Cricket Prediction • IPL Special</div>
+  <div class="sub">Accurate IPL Prediction & Match Reports</div>
 
   <a class="btn" href="https://t.me/+AsL6ndwC2pFjNzll">
-    JOIN TELEGRAM CHANNEL
+    
+    <!-- TELEGRAM SVG -->
+    <svg viewBox="0 0 24 24" fill="white">
+      <path d="M9.04 15.47l-.39 5.49c.56 0 .8-.24 1.08-.53l2.6-2.48 5.39 3.95c.99.55 1.7.26 1.97-.91l3.57-16.73c.34-1.59-.57-2.21-1.54-1.85L1.6 9.3c-1.54.6-1.52 1.46-.26 1.85l5.68 1.77L19.84 5.6c.6-.37 1.15-.17.7.2"/>
+    </svg>
+
+    Join Telegram Channel
   </a>
-
 </div>
 
-<div class="footer">
-  Trusted by 10,000+ users • Join Fast
+<!-- NEWS -->
+<div class="news">
+  <h2>IPL Latest Updates</h2>
+  <p>
+  IPL matches are getting more intense as teams push for playoff qualification. 
+  High scoring games and unexpected turns are making this season exciting. 
+  Stay connected with our Telegram channel for accurate predictions and updates.
+  </p>
 </div>
+
+<!-- BOTTOM MENU -->
+<div class="bottom">
+  <div class="menu" onclick="toggleMenu()">⋮</div>
+</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <a href="https://t.me/quicklygrow">View Advertiser</a>
+</div>
+
+<script>
+function toggleMenu(){
+  let p = document.getElementById("popup");
+  p.style.display = (p.style.display === "block") ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
