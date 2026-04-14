@@ -1,228 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ruhaan Dubai • IPL Prediction</title>
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-body{
-  background:url('https://i.pinimg.com/736x/8a/f1/ef/8af1efdbe7321314b207c9601d2ce5ab.jpg') no-repeat center/cover;
-  min-height:100vh;
-  color:#fff;
-}
-
-/* overlay */
-body::before{
-  content:'';
-  position:fixed;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.65);
-  backdrop-filter:blur(8px);
-  z-index:0;
-}
-
-/* TOP BAR */
-.topbar{
-  position:fixed;
-  top:0;
-  width:100%;
-  padding:12px 16px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:rgba(255,255,255,0.06);
-  backdrop-filter:blur(12px);
-  border-bottom-left-radius:20px;
-  border-bottom-right-radius:20px;
-  z-index:10;
-  font-weight:500;
-  letter-spacing:0.5px;
-}
-
-.topbar img{
-  width:42px;
-}
-
-/* MAIN */
-.main{
-  position:relative;
-  z-index:2;
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:0 20px;
-}
-
-.dp{
-  width:110px;
-  height:110px;
-  border-radius:50%;
-  border:3px solid #00e5ff;
-  margin-bottom:15px;
-}
-
-.name{
-  font-size:24px;
-  font-weight:600;
-  margin-bottom:5px;
-}
-
-.sub{
-  font-size:14px;
-  color:#bbb;
-  margin-bottom:25px;
-}
-
-/* BUTTON (FULL WIDTH + SVG) */
-.btn{
-  width:100%;
-  max-width:320px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  padding:15px;
-  border-radius:14px;
-  background:linear-gradient(135deg,#229ED9,#0088cc);
-  color:#fff;
-  font-weight:600;
-  text-decoration:none;
-  transition:.3s;
-}
-
-.btn svg{
-  width:20px;
-  height:20px;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 8px 25px rgba(0,136,204,0.5);
-}
-
-/* NEWS */
-.news{
-  position:relative;
-  z-index:2;
-  padding:25px 20px;
-}
-
-.news h2{
-  font-size:18px;
-  margin-bottom:10px;
-  font-weight:600;
-}
-
-.news p{
-  font-size:14px;
-  color:#ccc;
-  line-height:1.6;
-}
-
-/* BOTTOM MENU */
-.bottom{
-  position:fixed;
-  bottom:20px;
-  width:100%;
-  display:flex;
-  justify-content:center;
-  z-index:10;
-}
-
-.menu{
-  background:rgba(255,255,255,0.1);
-  backdrop-filter:blur(10px);
-  padding:10px 18px;
-  border-radius:30px;
-  cursor:pointer;
-  font-size:20px;
-}
-
-/* POPUP */
-.popup{
-  position:fixed;
-  bottom:80px;
-  left:50%;
-  transform:translateX(-50%);
-  background:#111;
-  padding:15px 20px;
-  border-radius:10px;
-  display:none;
-}
-
-.popup a{
-  color:#00e5ff;
-  text-decoration:none;
-  font-weight:500;
-}
-
-</style>
-</head>
+<!DOCTYPE html><html><head><meta name=viewport content="width=device-width,initial-scale=1"><title>Ruhaan Dubai</title><style>*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui}body{background:url(https://i.pinimg.com/736x/8a/f1/ef/8af1efdbe7321314b207c9601d2ce5ab.jpg)center/cover no-repeat;color:#fff}o{position:fixed;inset:0;background:rgba(0,0,0,.65);backdrop-filter:blur(8px);z-index:0}t{position:fixed;top:0;width:100%;height:60px;padding:0 16px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.06);backdrop-filter:blur(12px);border-radius:0 0 20px 20px;z-index:9}t img{width:42px}m{position:relative;z-index:2;min-height:100vh;display:flex;flex-direction:column;align-items:center;text-align:center;padding:90px 20px 20px}d img{width:110px;height:110px;border-radius:50%;border:3px solid #00e5ff;margin-bottom:15px}n{font-size:24px;font-weight:600;margin-bottom:4px}s{font-size:14px;color:#bbb;margin-bottom:25px}b{width:100%;max-width:320px;display:flex;align-items:center;justify-content:center;gap:10px;padding:15px;border-radius:14px;background:linear-gradient(135deg,#229ED9,#0088cc);color:#fff;text-decoration:none;font-weight:600}b svg{width:20px}nw{width:100%;max-width:500px;margin-top:40px;padding:0 10px;font-size:14px;color:#ccc;line-height:1.6;text-align:left}nw h{display:block;font-size:16px;margin-bottom:8px;color:#fff}f{position:fixed;bottom:20px;right:20px;width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);backdrop-filter:blur(12px);border-radius:50%;font-size:22px;z-index:9;box-shadow:0 6px 20px rgba(0,0,0,.4)}p{position:fixed;bottom:80px;right:20px;background:#111;padding:12px 18px;border-radius:10px;display:none;z-index:9}</style></head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-  <div>IPL LIVE</div>
-  <img src="https://img.ipl.com/upload/20250109/264d22b04764e4cef78569ed7f3aebe9.png">
-</div>
+<o></o>
 
-<!-- MAIN -->
-<div class="main">
-  <img class="dp" src="https://d1yei2z3i6k35z.cloudfront.net/13184094/69de131e1acb95.98369606_photo_2026-04-14_15-42-20.jpg">
-  
-  <div class="name">Ruhaan Dubai</div>
-  <div class="sub">Accurate IPL Prediction & Match Reports</div>
+<t><div>IPL LIVE</div><img src="https://img.ipl.com/upload/20250109/264d22b04764e4cef78569ed7f3aebe9.png"></t>
 
-  <a class="btn" href="https://t.me/+AsL6ndwC2pFjNzll">
-    
-    <!-- TELEGRAM SVG -->
-    <svg viewBox="0 0 24 24" fill="white">
-      <path d="M9.04 15.47l-.39 5.49c.56 0 .8-.24 1.08-.53l2.6-2.48 5.39 3.95c.99.55 1.7.26 1.97-.91l3.57-16.73c.34-1.59-.57-2.21-1.54-1.85L1.6 9.3c-1.54.6-1.52 1.46-.26 1.85l5.68 1.77L19.84 5.6c.6-.37 1.15-.17.7.2"/>
-    </svg>
+<m>
+<d><img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/69de131e1acb95.98369606_photo_2026-04-14_15-42-20.jpg"></d>
+<n>Ruhaan Dubai</n>
+<s>Paid 4000₹</s>
 
-    Join Telegram Channel
-  </a>
-</div>
+<a href="https://t.me/+AsL6ndwC2pFjNzll"><b>
+<svg viewBox="0 0 24 24" fill="white"><path d="M9.04 15.47l-.39 5.49c.56 0 .8-.24 1.08-.53l2.6-2.48 5.39 3.95c.99.55 1.7.26 1.97-.91l3.57-16.73c.34-1.59-.57-2.21-1.54-1.85L1.6 9.3c-1.54.6-1.52 1.46-.26 1.85l5.68 1.77L19.84 5.6c.6-.37 1.15-.17.7.2"/></svg>
+Join Telegram
+</b></a>
 
-<!-- NEWS -->
-<div class="news">
-  <h2>IPL Latest Updates</h2>
-  <p>
-  IPL matches are getting more intense as teams push for playoff qualification. 
-  High scoring games and unexpected turns are making this season exciting. 
-  Stay connected with our Telegram channel for accurate predictions and updates.
-  </p>
-</div>
+<nw>
+<h>IPL Latest Updates</h>
+Matches getting intense, high scoring games expected. Join Telegram for accurate predictions & reports.
+</nw>
 
-<!-- BOTTOM MENU -->
-<div class="bottom">
-  <div class="menu" onclick="toggleMenu()">⋮</div>
-</div>
+</m>
 
-<!-- POPUP -->
-<div class="popup" id="popup">
-  <a href="https://t.me/quicklygrow">View Advertiser</a>
-</div>
+<f onclick="x()">⋮</f>
 
-<script>
-function toggleMenu(){
-  let p = document.getElementById("popup");
-  p.style.display = (p.style.display === "block") ? "none" : "block";
-}
-</script>
+<p id=p><a href="https://t.me/quicklygrow" style="color:#00e5ff;text-decoration:none">View Advertiser</a></p>
 
-</body>
-</html>
+<script>function x(){p.style.display=p.style.display=='block'?'none':'block'}</script>
+
+</body></html>
